@@ -12,18 +12,27 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System.Windows.Shell;
 
 namespace BigBucksCoffee
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Home.xaml
     /// </summary>
-    public partial class MainWindow : NavigationWindow
+    public partial class Home : Page
     {
-        public MainWindow()
+        private Settings _settings;
+
+        public Home()
         {
             InitializeComponent();
+            _settings = new Settings("Big Bucks Coffee");
+            WindowTitle = _settings.Title;
+        }
+
+        private void OnClickHomeImage(object sender, RoutedEventArgs e)
+        {
+            SelectCategoryPage selectCategoryPage = new SelectCategoryPage();
+            NavigationService.Navigate(selectCategoryPage);
         }
     }
 }

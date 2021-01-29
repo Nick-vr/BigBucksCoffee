@@ -1,0 +1,75 @@
+﻿<Page x:Class="BigBucksCoffee.SelectCategoryPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:BigBucksCoffee"
+      mc:Ignorable="d"
+      d:DesignHeight="450" d:DesignWidth="800"
+      Style="{StaticResource pageStyle}">
+
+    <Grid Style="{StaticResource gridMarginStyle}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Image
+            HorizontalAlignment="Center"
+            Height="200" Margin="5,75,15,205"
+            VerticalAlignment="Center"
+            Width="200"
+            Source="../images/coffee.png"
+            MouseLeftButtonUp="OnClickCoffee" />
+        <Image
+            Grid.Column="1"
+            HorizontalAlignment="Center"
+            Height="210" Margin="49,50,49,200"
+            VerticalAlignment="Center"
+            Width="122"
+            Source="../images/noncoffee.png"
+            MouseLeftButtonUp="OnClickNonCoffee" />
+        <Image
+            Grid.Column="2"
+            HorizontalAlignment="Center"
+            Height="200"
+            Margin="0,0,0,130"
+            VerticalAlignment="Center"
+            Width="200"
+            Source="../images/pastrie.png"
+            MouseLeftButtonUp="OnClickPastries" />
+        <Label
+            Content="Coffee"
+            HorizontalAlignment="Center"
+            Margin="0,0,0,130"
+            VerticalAlignment="Bottom"
+            Foreground="#FF855252"
+            FontSize="36"
+            RenderTransformOrigin="0.688,1.105"
+            FontFamily="Rockwell Condensed"
+            MouseLeftButtonUp="OnClickCoffee" />
+        <Label
+            Content="Non-Coffee"
+            HorizontalAlignment="Center"
+            Margin="0,0,0,130"
+            VerticalAlignment="Bottom"
+            Foreground="#FF855252"
+            FontFamily="Rockwell Condensed"
+            FontSize="36"
+            Grid.Column="1"
+            MouseLeftButtonUp="OnClickNonCoffee" />
+        <Label
+            Content="Pastries"
+            HorizontalAlignment="Center"
+            Margin="0,0,0,130"
+            VerticalAlignment="Bottom"
+            Foreground="#FF855252"
+            FontFamily="Rockwell Condensed"
+            FontSize="36"
+            Grid.Column="2"
+            MouseLeftButtonUp="OnClickPastries" />
+    </Grid>
+</Page>

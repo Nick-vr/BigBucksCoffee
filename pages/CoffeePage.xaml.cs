@@ -12,18 +12,22 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System.Windows.Shell;
 
 namespace BigBucksCoffee
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for CoffeePage.xaml
     /// </summary>
-    public partial class MainWindow : NavigationWindow
+    public partial class CoffeePage : Page
     {
-        public MainWindow()
+        private Settings _settings;
+
+        public CoffeePage()
         {
             InitializeComponent();
+
+            _settings = new Settings("Big Bucks Coffee - Coffee");
+            WindowTitle = _settings.Title;
         }
     }
 }

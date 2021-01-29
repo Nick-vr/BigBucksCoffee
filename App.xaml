@@ -4,6 +4,16 @@
              xmlns:local="clr-namespace:BigBucksCoffee"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <!--Grid Style-->
+        <Style x:Key="gridMarginStyle">
+            <Setter Property="Grid.Margin" Value="20" />
+        </Style>
+
+        <!--Page Style-->
+        <Style x:Key="pageStyle">
+            <Setter Property="Page.Height" Value="500" />
+            <Setter Property="Page.Width" Value="700" />
+            <Setter Property="Page.Background" Value="#212121" />
+        </Style>
     </Application.Resources>
 </Application>
