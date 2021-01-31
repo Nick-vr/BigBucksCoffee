@@ -18,5 +18,6 @@
 
         <Border Background="Black" />
         <Image x:Name="ProductImg" Height="170" Width="160" Grid.ColumnSpan="2" Source="/images/espresso.png" />
+        <Label x:Name="ProductName" Content="ProductName" HorizontalAlignment="Left" Margin="0,25,0,0" Grid.Row="1" VerticalAlignment="Top" Grid.ColumnSpan="2" />
     </Grid>
 </UserControl>
