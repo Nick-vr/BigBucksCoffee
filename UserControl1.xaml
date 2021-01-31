@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:BigBucksCoffee"
              mc:Ignorable="d"
-             d:DesignHeight="450" d:DesignWidth="800" Width="200" Height="300" Background="HotPink">
+             d:DesignHeight="450" d:DesignWidth="800" Width="200" Height="300" Background="#212121">
     <Grid Style="{StaticResource gridMarginStyle}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
@@ -17,7 +17,76 @@
         </Grid.RowDefinitions>
 
         <Border Background="Black" />
-        <Image x:Name="ProductImg" Height="170" Width="160" Grid.ColumnSpan="2" Source="/images/espresso.png" />
-        <Label x:Name="ProductName" Content="ProductName" HorizontalAlignment="Left" Margin="0,25,0,0" Grid.Row="1" VerticalAlignment="Top" Grid.ColumnSpan="2" />
+        <Image
+            x:Name="ProductImg"
+            Height="170"
+            Width="160"
+            Grid.ColumnSpan="2"
+            Source="/images/espresso.png" />
+        <Label
+            x:Name="ProductName"
+            Content="ProductName"
+            HorizontalAlignment="Left"
+            Grid.Row="1"
+            VerticalAlignment="Top"
+            FontSize="10"
+            RenderTransformOrigin="1.056,2.174"
+            Foreground="#FF855252" />
+        <Label
+            x:Name="ProductPrice"
+            Content="ProductPrice"
+            HorizontalAlignment="Right"
+            Grid.Row="1"
+            VerticalAlignment="Top"
+            RenderTransformOrigin="1.205,-0.423"
+            Grid.Column="1"
+            FontSize="10"
+            Foreground="#FF855252" />
+        <Label
+            x:Name="ItemAmount"
+            Content="Amount:"
+            HorizontalAlignment="Right"
+            Grid.Row="1"
+            VerticalAlignment="Top"
+            RenderTransformOrigin="1.205,-0.423"
+            FontSize="10"
+            Margin="0,45,32,0"
+            Foreground="#FF855252" />
+        <TextBox
+            x:Name="NumberTextBox"
+            PreviewTextInput="NumberValidationTextBox"
+            Height="15"
+            Grid.Row="1"
+            Margin="51,50,0,25"
+            Background="#FF212121" BorderBrush="#FF855252" FontSize="10" />
+        <Label
+            x:Name="IsInStock"
+            Content="In Stock"
+            HorizontalAlignment="Right"
+            Grid.Row="1"
+            VerticalAlignment="Top"
+            RenderTransformOrigin="1.205,-0.423"
+            FontSize="10"
+            Margin="0,45,0,0"
+            Foreground="#FF12E02E"
+            Grid.Column="1" />
+        <Button
+            x:Name="AddToCart"
+            Grid.ColumnSpan="2"
+            Content="Add to cart"
+            HorizontalAlignment="Center"
+            Grid.Row="1"
+            VerticalAlignment="Bottom"
+            Height="20"
+            Width="160"
+            Foreground="#FF855252"
+            BorderBrush="#FF191817" FontSize="14" FontWeight="Bold">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0" />
+                    <GradientStop Color="#FF212121" Offset="1" />
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
     </Grid>
 </UserControl>

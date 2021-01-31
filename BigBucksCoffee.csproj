@@ -55,7 +55,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="IMenuItem.cs" />
+    <Compile Include="menu-categories\coffee\Coffee.cs" />
+    <Compile Include="interfaces\IMenuItem.cs" />
+    <Compile Include="interfaces\IMenuItemRepo.cs" />
     <Compile Include="pages\CoffeePage.xaml.cs">
       <DependentUpon>CoffeePage.xaml</DependentUpon>
     </Compile>
@@ -151,6 +153,10 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\espresso.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="menu-categories\non-coffee\" />
+    <Folder Include="menu-categories\pastries\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
