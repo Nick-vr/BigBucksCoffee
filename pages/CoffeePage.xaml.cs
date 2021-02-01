@@ -21,7 +21,7 @@ namespace BigBucksCoffee
     public partial class CoffeePage : Page
     {
         private Settings _settings;
-        private IMenuItemRepo _menuItemRepo;
+        private IMenuItemRepo _coffeeRepo;
 
         public CoffeePage()
         {
@@ -30,21 +30,25 @@ namespace BigBucksCoffee
             _settings = new Settings("Big Bucks Coffee - Coffee");
             WindowTitle = _settings.Title;
 
-            _menuItemRepo = new MenuItemRepo();
-            var menuItems = _menuItemRepo.GetMenuItems();
+            _coffeeRepo = new CoffeeRepo();
+            var menuItems = _coffeeRepo.GetMenuItems();
             GenerateControlsForMenuItems(menuItems);
         }
 
         private void GenerateControlsForMenuItems(IEnumerable<IMenuItem> menuItems)
         {
-            //int i = 1;
-            //foreach (IMenuItem menuItem in menuItems)
-            //{
-            //    UserControl1 userControl1 = new UserControl1
-            //    {
-            //        Name =
-            //    };
-            //}
+            foreach (IMenuItem menuItem in menuItems)
+            {
+                UserControl1 userControl1 = new UserControl1
+                {
+                    MenuItemId = menuItem.Id,
+                    Image = menuItem.Image,
+                    MyProductName = menuItem.Name,
+                    Price = menuItem.Price,
+                };
+
+                CoffeePageWrap.Children.Add(userControl1);
+            }
         }
     }
 }

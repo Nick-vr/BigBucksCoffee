@@ -15,7 +15,7 @@ namespace BigBucksCoffee
         public string Image { get; set; }
         public string Description { get; set; }
 
-        public MenuItem(int id, string name, double price, bool isInStock = true, string image = "https://picsum.photos/160/170", string description = "")
+        public MenuItem(int id, string name, double price, string image, bool isInStock = true, string description = "")
         {
             Id = id;
             Name = name;

@@ -26,6 +26,32 @@ namespace BigBucksCoffee
             InitializeComponent();
         }
 
+        public int MenuItemId { get; set; }
+
+        private string _image;
+
+        public string Image
+        {
+            get { return _image; }
+            set
+            {
+                _image = value;
+                ProductImg.Source = new BitmapImage(new Uri(Image, UriKind.Relative));
+            }
+        }
+
+        public string MyProductName
+        {
+            get { return (string)ProductName.Content; }
+            set { ProductName.Content = value; }
+        }
+
+        public double Price
+        {
+            get { return (double)ProductPrice.Content; }
+            set { ProductPrice.Content = value; }
+        }
+
         private void NumberValidationTextBox(object sender, TextCompositionEventArgs e)
         {
             Regex regex = new Regex("[^0-9]+");
