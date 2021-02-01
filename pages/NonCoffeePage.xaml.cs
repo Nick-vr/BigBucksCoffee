@@ -21,12 +21,33 @@ namespace BigBucksCoffee
     public partial class NonCoffeePage : Page
     {
         private Settings _settings;
+        private IMenuItemRepo _nonCoffeeRepo;
 
         public NonCoffeePage()
         {
             InitializeComponent();
             _settings = new Settings("Big Bucks Coffee - Non-Coffee");
             WindowTitle = _settings.Title;
+
+            _nonCoffeeRepo = new NonCoffeeRepo();
+            var menuItems = _nonCoffeeRepo.GetMenuItems();
+            GenerateControlsForMenuItems(menuItems);
+        }
+
+        private void GenerateControlsForMenuItems(IEnumerable<IMenuItem> menuItems)
+        {
+            foreach (IMenuItem menuItem in menuItems)
+            {
+                UserControl1 userControl1 = new UserControl1
+                {
+                    MenuItemId = menuItem.Id,
+                    Image = menuItem.Image,
+                    MyProductName = menuItem.Name,
+                    Price = menuItem.Price,
+                };
+
+                NonCoffeePageWrap.Children.Add(userControl1);
+            }
         }
     }
 }

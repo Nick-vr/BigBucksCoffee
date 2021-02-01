@@ -8,6 +8,14 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Style="{StaticResource pageStyle}">
 
-    <Grid>
+    <Grid Style="{StaticResource gridMarginStyle}">
+        <ScrollViewer
+                Height="400"
+                Width="660"
+                HorizontalScrollBarVisibility="Disabled"
+                Margin="0,0,0,60">
+            <WrapPanel x:Name="NonCoffeePageWrap">
+            </WrapPanel>
+        </ScrollViewer>
     </Grid>
 </Page>

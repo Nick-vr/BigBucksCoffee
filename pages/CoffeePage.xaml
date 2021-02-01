@@ -12,9 +12,9 @@
         <ScrollViewer
                 Height="400"
                 Width="660"
-                HorizontalScrollBarVisibility="Disabled" Margin="0,0,0,60">
-            <WrapPanel
-            x:Name="CoffeePageWrap">
+                HorizontalScrollBarVisibility="Disabled"
+                Margin="0,0,0,60">
+            <WrapPanel x:Name="CoffeePageWrap">
             </WrapPanel>
         </ScrollViewer>
     </Grid>

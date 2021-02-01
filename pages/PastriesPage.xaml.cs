@@ -21,12 +21,33 @@ namespace BigBucksCoffee
     public partial class PastriesPage : Page
     {
         private Settings _settings;
+        private IMenuItemRepo _pastriesRepo;
 
         public PastriesPage()
         {
             InitializeComponent();
             _settings = new Settings("Big Bucks Coffee - Pastries");
             WindowTitle = _settings.Title;
+
+            _pastriesRepo = new PastriesRepo();
+            var menuItems = _pastriesRepo.GetMenuItems();
+            GenerateControlsForMenuItems(menuItems);
+        }
+
+        private void GenerateControlsForMenuItems(IEnumerable<IMenuItem> menuItems)
+        {
+            foreach (IMenuItem menuItem in menuItems)
+            {
+                UserControl1 userControl1 = new UserControl1
+                {
+                    MenuItemId = menuItem.Id,
+                    Image = menuItem.Image,
+                    MyProductName = menuItem.Name,
+                    Price = menuItem.Price,
+                };
+
+                PastriesPageWrap.Children.Add(userControl1);
+            }
         }
     }
 }

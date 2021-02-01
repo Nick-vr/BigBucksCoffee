@@ -59,8 +59,11 @@
     <Compile Include="interfaces\IMenuItem.cs" />
     <Compile Include="interfaces\IMenuItemRepo.cs" />
     <Compile Include="menu-categories\coffee\CoffeeRepo.cs" />
-    <Compile Include="MenuItem.cs" />
-    <Compile Include="MenuItemRepo.cs" />
+    <Compile Include="menu-categories\non-coffee\NonCoffee.cs" />
+    <Compile Include="menu-categories\MenuItem.cs" />
+    <Compile Include="menu-categories\non-coffee\NonCoffeeRepo.cs" />
+    <Compile Include="menu-categories\pastries\PastriesRepo.cs" />
+    <Compile Include="menu-categories\pastries\Patries.cs" />
     <Compile Include="pages\CoffeePage.xaml.cs">
       <DependentUpon>CoffeePage.xaml</DependentUpon>
     </Compile>
@@ -158,8 +161,12 @@
     <Resource Include="images\espresso.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="menu-categories\non-coffee\" />
-    <Folder Include="menu-categories\pastries\" />
+    <Resource Include="images\bagel.jpg" />
+    <Resource Include="images\chai.jpg" />
+    <Resource Include="images\cinnamonroll.jpg" />
+    <Resource Include="images\hottea.jpg" />
+    <Resource Include="images\lemonade.jpg" />
+    <Resource Include="images\muffin.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\cappuccino.jpg" />
