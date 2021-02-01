@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BigBucksCoffee.coffee
+namespace BigBucksCoffee
 {
     internal class Coffee : IMenuItem
     {

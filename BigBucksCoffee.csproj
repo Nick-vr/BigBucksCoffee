@@ -58,6 +58,8 @@
     <Compile Include="menu-categories\coffee\Coffee.cs" />
     <Compile Include="interfaces\IMenuItem.cs" />
     <Compile Include="interfaces\IMenuItemRepo.cs" />
+    <Compile Include="MenuItem.cs" />
+    <Compile Include="MenuItemRepo.cs" />
     <Compile Include="pages\CoffeePage.xaml.cs">
       <DependentUpon>CoffeePage.xaml</DependentUpon>
     </Compile>

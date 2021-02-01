@@ -8,12 +8,12 @@ namespace BigBucksCoffee
 {
     internal interface IMenuItem
     {
-        string Description { get; set; }
         int Id { get; set; }
-        string Image { get; set; }
         string Name { get; set; }
         double Price { get; set; }
         bool IsInStock { get; set; }
+        string Image { get; set; }
+        string Description { get; set; }
 
         string ToString();
     }

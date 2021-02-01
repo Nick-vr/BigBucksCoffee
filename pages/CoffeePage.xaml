@@ -10,7 +10,7 @@
 
     <Grid Style="{StaticResource gridMarginStyle}">
         <WrapPanel>
-            <ScrollViewer Height="495" Width="700" HorizontalScrollBarVisibility="Disabled" />
+            <ScrollViewer Height="460" Width="660" HorizontalScrollBarVisibility="Disabled" />
         </WrapPanel>
     </Grid>
 </Page>

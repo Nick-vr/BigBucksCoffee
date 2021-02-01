@@ -21,6 +21,7 @@ namespace BigBucksCoffee
     public partial class CoffeePage : Page
     {
         private Settings _settings;
+        private IMenuItemRepo _menuItemRepo;
 
         public CoffeePage()
         {
@@ -28,6 +29,22 @@ namespace BigBucksCoffee
 
             _settings = new Settings("Big Bucks Coffee - Coffee");
             WindowTitle = _settings.Title;
+
+            _menuItemRepo = new MenuItemRepo();
+            var menuItems = _menuItemRepo.GetMenuItems();
+            GenerateControlsForMenuItems(menuItems);
+        }
+
+        private void GenerateControlsForMenuItems(IEnumerable<IMenuItem> menuItems)
+        {
+            //int i = 1;
+            //foreach (IMenuItem menuItem in menuItems)
+            //{
+            //    UserControl1 userControl1 = new UserControl1
+            //    {
+            //        Name =
+            //    };
+            //}
         }
     }
 }
