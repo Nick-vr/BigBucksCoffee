@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BigBucksCoffee
 {
-    internal abstract class Coffee : MenuItem
+    internal class Coffee : MenuItem
     {
         public int Caffeine { get; set; }
         public bool IsHot { get; set; }

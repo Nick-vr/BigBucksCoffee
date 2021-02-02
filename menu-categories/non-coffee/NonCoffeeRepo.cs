@@ -12,9 +12,9 @@ namespace BigBucksCoffee
         {
             var menuItems = new List<IMenuItem>
             {
-                new MenuItem(4, "Hot Tea", 3, "/images/hottea.jpg"),
-                new MenuItem(5, "Chai", 5.5, "/images/chai.jpg"),
-                new MenuItem(6, "Lemonade", 3.5, "/images/lemonade.jpg"),
+                new NonCoffee(4, "Hot Tea", 3, "/images/hottea.jpg", true, false, true),
+                new NonCoffee(5, "Chai", 5.5, "/images/chai.jpg", true, false, true),
+                new NonCoffee(6, "Lemonade", 3.5, "/images/lemonade.jpg", false, false, true),
             };
             return menuItems;
         }

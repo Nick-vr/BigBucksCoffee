@@ -63,7 +63,7 @@
     <Compile Include="menu-categories\MenuItem.cs" />
     <Compile Include="menu-categories\non-coffee\NonCoffeeRepo.cs" />
     <Compile Include="menu-categories\pastries\PastriesRepo.cs" />
-    <Compile Include="menu-categories\pastries\Patries.cs" />
+    <Compile Include="menu-categories\pastries\Pastries.cs" />
     <Compile Include="pages\CoffeePage.xaml.cs">
       <DependentUpon>CoffeePage.xaml</DependentUpon>
     </Compile>

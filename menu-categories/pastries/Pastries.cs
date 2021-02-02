@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace BigBucksCoffee
 {
-    internal abstract class Patries : MenuItem
+    internal class Pastries : MenuItem
     {
         public bool IsGlutenFree { get; set; }
 
-        public Patries(int id, string name, double price, string image, bool isGlutenFree, bool isInStock = true, string description = "")
+        public Pastries(int id, string name, double price, string image, bool isGlutenFree, bool isInStock = true, string description = "")
             : base(id, name, price, image, isInStock, description)
         {
             IsGlutenFree = isGlutenFree;

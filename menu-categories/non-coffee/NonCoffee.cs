@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BigBucksCoffee.menu_categories.non_coffee
+namespace BigBucksCoffee
 {
-    internal abstract class NonCoffee : MenuItem
+    internal class NonCoffee : MenuItem
     {
         public bool IsHot { get; set; }
         public bool HasMilk { get; set; }

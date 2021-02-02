@@ -16,13 +16,11 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
-        <Border Background="Black" />
         <Image
             x:Name="ProductImg"
             Height="170"
             Width="160"
-            Grid.ColumnSpan="2"
-            Source="/images/espresso.png" />
+            Grid.ColumnSpan="2" />
         <Label
             x:Name="ProductName"
             Content="ProductName"

@@ -10,8 +10,7 @@
 
     <Grid Style="{StaticResource gridMarginStyle}">
         <ScrollViewer
-                Height="400"
-                Width="660"
+                VerticalScrollBarVisibility="Auto"
                 HorizontalScrollBarVisibility="Disabled"
                 Margin="0,0,0,60">
             <WrapPanel x:Name="CoffeePageWrap">
